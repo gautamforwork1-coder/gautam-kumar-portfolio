@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import {
-  ArrowDown, ArrowDownRight, ArrowRight, ArrowUpRight, Check, Code2, Download,
+  ArrowDown, ArrowDownRight, ArrowRight, ArrowUpRight, Check, Code2,
   Github, Linkedin, Mail, Menu, Server, X,
 } from 'lucide-react'
 
@@ -49,7 +49,6 @@ function App() {
           <a href="#work" onClick={closeMenu}>Work</a>
           <a href="#skills" onClick={closeMenu}>Skills</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
-          <a className="resume-download-link" href="/resume.pdf" download="Gautam-Kumar-Resume.pdf" onClick={closeMenu}><Download size={14} /> Download resume</a>
         </nav>
         <a className="nav-cta" href="#contact">Let’s talk <ArrowUpRight size={15} /></a>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Close menu' : 'Open menu'}>{menuOpen ? <X /> : <Menu />}</button>
