@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import {
   ArrowDown, ArrowDownRight, ArrowRight, ArrowUpRight, Check, Code2,
-  Github, Linkedin, Mail, Menu, Server, X,
+  Download, Github, Linkedin, Mail, Menu, Server, X,
 } from 'lucide-react'
 
 const projectUrl = 'https://github.com/gautamforwork1-coder/employee-leave-management-api'
@@ -63,6 +63,7 @@ function App() {
             <div className="hero-actions">
               <a className="button button-lime" href="#work">Explore my work <ArrowDownRight size={17} /></a>
               <button className="text-link" onClick={copyEmail}>{copied ? <><Check size={16} /> Email copied</> : <><Mail size={16} /> Get in touch</>}</button>
+              <a className="text-link resume-download" href="/resume.pdf" download="Gautam-Kumar-Resume.pdf"><Download size={16} /> Download resume</a>
             </div>
             <div className="hero-foot"><span>BASED IN BENGALURU, INDIA</span><span>JAVA · SPRING BOOT · REST</span></div>
           </div>
