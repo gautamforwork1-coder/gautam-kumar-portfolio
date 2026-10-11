@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import {
   ArrowDown, ArrowDownRight, ArrowRight, ArrowUpRight, Check, Code2,
-  Download, Github, Linkedin, Mail, Menu, Server, X,
+  Download, Github, Linkedin, Mail, Menu, Server, X, BriefcaseBusiness, Network, Hotel, Dumbbell,
 } from 'lucide-react'
 
 const projectUrl = 'https://github.com/gautamforwork1-coder/employee-leave-management-api'
@@ -9,8 +9,9 @@ const liveUrl = 'https://employee-leave-api-ndz6.onrender.com'
 
 const skills = [
   { group: 'Backend', items: ['Java', 'Spring Boot', 'Spring Web', 'Spring Security', 'REST APIs'] },
-  { group: 'Data', items: ['PostgreSQL', 'Spring Data JPA', 'Hibernate', 'Flyway'] },
-  { group: 'Tools & quality', items: ['Maven', 'Git & GitHub', 'Docker', 'JUnit', 'Mockito', 'GitHub Actions'] },
+  { group: 'Data & messaging', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Neo4j', 'Kafka', 'Redis', 'Spring Data JPA', 'Hibernate'] },
+  { group: 'Tools & quality', items: ['Maven', 'Git & GitHub', 'Docker', 'Jenkins', 'JUnit', 'Mockito', 'AWS', 'CI/CD'] },
+  { group: 'Frontend & other', items: ['JavaScript', 'React.js', 'Node.js', 'Express', 'Python', 'FastAPI', 'GraphQL', 'SQL'] },
 ]
 
 function App() {
@@ -46,7 +47,8 @@ function App() {
         <a href="#home" className="brand" aria-label="Gautam Kumar home"><span className="brand-mark">G<span>.</span></span><span>GAUTAM KUMAR</span></a>
         <nav className={menuOpen ? 'nav-links nav-open' : 'nav-links'} aria-label="Main navigation">
           <a href="#about" onClick={closeMenu}>About</a>
-          <a href="#work" onClick={closeMenu}>Work</a>
+          <a href="#experience" onClick={closeMenu}>Experience</a>
+          <a href="#work" onClick={closeMenu}>Projects</a>
           <a href="#skills" onClick={closeMenu}>Skills</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
         </nav>
@@ -57,9 +59,9 @@ function App() {
       <main>
         <section className="hero section-wrap" id="home">
           <div className="hero-copy">
-            <div className="eyebrow"><span className="status-dot" /> OPEN TO JAVA BACKEND OPPORTUNITIES</div>
+            <div className="eyebrow"><span className="status-dot" /> ASSOCIATE SOFTWARE ENGINEER · JAVA BACKEND</div>
             <h1>Building the<br /><span className="outlined">logic</span> behind<br />better products<span className="lime-dot">.</span></h1>
-            <p className="hero-sub">I’m Gautam — a support engineer moving into backend development, learning by building real Java and Spring Boot applications.</p>
+            <p className="hero-sub">I’m Gautam — an Associate Software Engineer building Java backend services, REST APIs, and event-driven workflows.</p>
             <div className="hero-actions">
               <a className="button button-lime" href="#work">Explore my work <ArrowDownRight size={17} /></a>
               <button className="text-link" onClick={copyEmail}>{copied ? <><Check size={16} /> Email copied</> : <><Mail size={16} /> Get in touch</>}</button>
@@ -94,17 +96,25 @@ function App() {
         <div className="ticker" aria-label="Technologies"><div className="ticker-track">{Array.from({ length: 2 }, (_, copy) => <div className="ticker-row" key={copy}><span>JAVA</span><i>✳</i><span>SPRING BOOT</span><i>✳</i><span>REST APIS</span><i>✳</i><span>POSTGRESQL</span><i>✳</i><span>DOCKER</span><i>✳</i><span>JAVA</span><i>✳</i><span>SPRING BOOT</span><i>✳</i><span>REST APIS</span><i>✳</i><span>POSTGRESQL</span><i>✳</i><span>DOCKER</span><i>✳</i></div>)}</div></div>
 
         <section className="about section-wrap section-pad" id="about">
-          <div className="section-label reveal"><span>01 — ABOUT</span><span>A LITTLE CONTEXT</span></div>
+          <div className="section-label reveal"><span>01 — ABOUT</span><span>ENGINEERING AT THE INTERSECTION OF SYSTEMS & PEOPLE</span></div>
           <div className="about-grid">
-            <h2 className="reveal">Good support starts with <span>understanding</span> the system.</h2>
-            <div className="about-copy reveal"><p>My career began in support engineering, where I learned to investigate issues carefully, communicate clearly, and follow a problem all the way through. Now I’m building on that foundation with Java backend development.</p><p>I’m focused on writing maintainable APIs, modelling business rules, and understanding what happens from an HTTP request all the way to the database.</p><a className="inline-link" href="#work">See what I’m building <ArrowRight size={16} /></a></div>
+            <h2 className="reveal">Building backend systems that are <span>reliable</span> and useful.</h2>
+            <div className="about-copy reveal"><p>I’m a software engineer with experience developing Java and Spring Boot services, REST APIs, and asynchronous workflows. At CGI, I work on employee time, leave, and training capabilities.</p><p>I care about clear business rules, dependable integrations, and testing changes before they reach production. My project work also spans OCR and full-stack applications.</p><a className="inline-link" href="#experience">Explore my experience <ArrowRight size={16} /></a></div>
           </div>
-          <div className="about-facts reveal"><div><strong>2.3<span>+</span></strong><small>YEARS IN SUPPORT ENGINEERING</small></div><div><strong>01</strong><small>DEPLOYED JAVA PROJECT</small></div><div><strong>2023</strong><small>B.TECH · SRM INSTITUTE</small></div><div className="fact-note">Curiosity in.<br />Better systems out.<span>↗</span></div></div>
+          <div className="about-facts reveal"><div><strong>2024</strong><small>CGI · ASSOCIATE SOFTWARE ENGINEER</small></div><div><strong>85<span>%+</span></strong><small>TEST COVERAGE IN TEAM PROJECT</small></div><div><strong>2023</strong><small>B.TECH · SRM INSTITUTE</small></div><div className="fact-note">Thoughtful code.<br />Useful outcomes.<span>↗</span></div></div>
+        </section>
+
+        <section className="experience section-wrap section-pad" id="experience">
+          <div className="section-label reveal"><span>02 — EXPERIENCE</span><span>PROFESSIONAL JOURNEY</span></div>
+          <div className="experience-list">
+            <article className="experience-item reveal"><div className="experience-date">JUN 2024 — PRESENT<br /><span>BENGALURU, INDIA</span></div><div className="experience-marker"><BriefcaseBusiness size={16} /></div><div className="experience-detail"><h3>Associate Software Engineer <span>· CGI</span></h3><ul><li>Develop REST APIs for the Worktime Bank module covering employee hours, leave, and compensation.</li><li>Build training workflows for course creation, enrollment, cancellations, and classroom capacity validation.</li><li>Implement automated waitlist handling and publish training events with Apache Kafka for asynchronous notifications.</li><li>Write JUnit and Mockito tests, reaching 85%+ coverage and helping reduce post-release defects by 20%.</li></ul></div></article>
+            <article className="experience-item reveal"><div className="experience-date">SEP 2023 — MAR 2024<br /><span>INDIA</span></div><div className="experience-marker"><Code2 size={16} /></div><div className="experience-detail"><h3>Software Development Engineer Intern <span>· OpenText</span></h3><ul><li>Built a PaddleOCR pipeline to digitize handwritten forms, achieving 87.3% accuracy while reducing processing time.</li><li>Integrated a Phi-3 language model to extract and correct critical data, reducing manual errors.</li><li>Developed a React and FastAPI application for real-time OCR processing and model integration.</li></ul></div></article>
+          </div>
         </section>
 
         <section className="work section-wrap section-pad" id="work">
-          <div className="section-label reveal"><span>02 — SELECTED WORK</span><span>BUILDING IN PUBLIC</span></div>
-          <div className="work-heading reveal"><h2>One project.<br /><span>A real workflow.</span></h2><p>A portfolio project built from scratch to practise the decisions a backend engineer makes beyond simply returning JSON.</p></div>
+          <div className="section-label reveal"><span>03 — SELECTED WORK</span><span>PROJECTS & ENGINEERING</span></div>
+          <div className="work-heading reveal"><h2>Systems built<br /><span>to solve problems.</span></h2><p>Professional and personal work across Java microservices, booking workflows, OCR, and operations tools.</p></div>
           <article className="project-card reveal">
             <div className="project-top"><span className="project-index">FEATURED PROJECT / 001</span><span className="project-state"><i /> LIVE ON RENDER</span></div>
             <div className="project-main"><div className="project-info"><div className="project-icon"><Code2 size={22} /></div><h3>Employee Leave<br />Management API</h3><p>A REST API for submitting leave requests, tracking balances, and handling manager approvals — with business rules enforced in the service layer.</p><div className="tag-list"><span>JAVA 17</span><span>SPRING BOOT</span><span>POSTGRESQL</span><span>FLYWAY</span><span>DOCKER</span></div><div className="project-links"><a className="button button-lime" href={projectUrl} target="_blank" rel="noreferrer">View source <Github size={16} /></a><a className="project-live-link" href={`${liveUrl}/swagger-ui.html`} target="_blank" rel="noreferrer">Try the API <ArrowUpRight size={16} /></a></div></div>
@@ -112,11 +122,16 @@ function App() {
             </div>
             <div className="project-bottom"><span>MY FIRST END-TO-END JAVA BACKEND BUILD</span><span>SPRING · DATA · SECURITY · DEPLOYMENT</span></div>
           </article>
-          <p className="honesty-note reveal"><span>↗</span> Built as a learning portfolio project — not represented as prior professional Java experience.</p>
+          <div className="resume-project-grid">
+            <article className="resume-project reveal"><div className="resume-project-icon"><Network size={20} /></div><span className="resume-project-kicker">MICROSERVICES · JAVA</span><h3>LinkSphere</h3><p>A networking platform for profiles, posts, connections, and notifications. Uses Eureka discovery, API Gateway, Feign, Kafka, PostgreSQL, and Neo4j.</p><div className="tag-list"><span>SPRING BOOT</span><span>KAFKA</span><span>NEO4J</span><span>RESILIENCE4J</span></div></article>
+            <article className="resume-project reveal"><div className="resume-project-icon"><Hotel size={20} /></div><span className="resume-project-kicker">BOOKING WORKFLOWS · JAVA</span><h3>BookMyStay</h3><p>A hotel booking system covering search, room availability, reservations, payment integration, notifications, inventory updates, and booking status.</p><div className="tag-list"><span>SPRING BOOT</span><span>JPA</span><span>SPRING BATCH</span><span>JWT</span></div></article>
+            <article className="resume-project reveal"><div className="resume-project-icon"><Dumbbell size={20} /></div><span className="resume-project-kicker">FULL-STACK · OPERATIONS</span><h3>GymOps</h3><p>A gym management platform for memberships, automated billing, trainer schedules, and revenue analytics, with authentication and role-based access.</p><div className="tag-list"><span>REACT</span><span>NODE.JS</span><span>MONGODB</span><span>REDUX</span></div></article>
+          </div>
+          <p className="honesty-note reveal"><span>↗</span> Employee Leave Management API is a separate portfolio build. The projects above reflect the experience listed in my resume.</p>
         </section>
 
         <section className="skills section-wrap section-pad" id="skills">
-          <div className="section-label reveal"><span>03 — TOOLKIT</span><span>LEARNING BY BUILDING</span></div>
+          <div className="section-label reveal"><span>04 — TOOLKIT</span><span>LANGUAGES, FRAMEWORKS & PLATFORMS</span></div>
           <div className="skills-grid"><div className="skills-intro reveal"><h2>Tools I’m<br /><span>working with.</span></h2><p>My current learning is centred around the Java backend stack, from API design through persistence and deployment.</p></div><div className="skill-groups">{skills.map((group, i) => <div className="skill-group reveal" key={group.group}><div className="skill-group-top"><span>0{i + 1}</span><h3>{group.group}</h3><ArrowUpRight size={16} /></div><div className="skill-pills">{group.items.map((item) => <span key={item}>{item}</span>)}</div></div>)}</div></div>
         </section>
 
